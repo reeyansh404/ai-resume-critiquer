@@ -12,7 +12,7 @@ st.set_page_config(page_title = "AI Resume Critiquer" , page_icon="📄", layout
 st.title("AI Resume Critiquer")
 st.markdown("Upload your resume and get AI powered feedback tailor to your needs!")
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 uploaded_file = st.file_uploader("Upload your resume (PDF or TXT)" , type=["pdf" , "txt"])
 job_role = st.text_input("Enter the job that you're targetting (optional)")
